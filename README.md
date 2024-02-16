@@ -13,3 +13,15 @@
 - Modificar una Tarea _(Cambiar de Estado)_
 - Eliminación de una Tarea
 - Reportes segun estado _(Filtrado de Tareas)_
+
+### Pantalla de Presentación
+******************************************
+*    Primera Practica Ingenieria de      *
+*                Software                *
+*             Lista de Tareas            *
+******************************************
+
+Integrantes:
+- Rosario Calisaya
+- Ignacio Tapia
+- Willy Vargas
