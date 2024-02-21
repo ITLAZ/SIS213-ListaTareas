@@ -2,6 +2,7 @@ from tarea import tarea
 from datetime import datetime
 
 taskList = []
+estado=""
 
 def writeFile(taskList):
     file = open("tareas.txt", "w")
@@ -28,6 +29,13 @@ def add_tarea():
 def show_tareas(taskList):
     for i in taskList:
         print(i.nombre, i.detalles, i.fechaC, i.fechaL, i.estado, "\n")
+
+def filtrar_por_estado(taskList, estado):
+    for i in taskList:
+        if i.estado.lower() == estado.lower():
+            print(i.nombre, i.detalles, i.fechaC, i.fechaC, i.fechaL, i.estado, "\n")
+
+
 
 def mod_tarea(taskList):
     nombre = input("Nombre de la tarea a modificar: ")
@@ -70,7 +78,8 @@ def main():
         print("2. Mostrar tareas")
         print("3. Modificar tarea")
         print("4. Eliminar tarea")
-        print("5. Salir")
+        print("5. Filtrado")
+        print("6. Salir")
         opcion = int(input("Opción: "))
         if opcion == 1:
             taskList.append(add_tarea())
@@ -80,6 +89,9 @@ def main():
             mod_tarea(taskList)
         elif opcion == 4:
             del_tarea(taskList)
+        elif opcion == 5:
+            estado=input("Ingrese el estado que desea ver ")
+            filtrar_por_estado(taskList, estado)
         else:
             writeFile(taskList)
             break
