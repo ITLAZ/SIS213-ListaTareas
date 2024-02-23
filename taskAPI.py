@@ -25,6 +25,10 @@ app.add_middleware(
 tareas = [
     { "id": 1, "title": "Tarea 1", "description": "Detalles de la tarea 1", "status": "Pendiente", "due_date": "01-01-2022" },
     { "id": 2, "title": "Tarea 2", "description": "Detalles de la tarea 2", "status": "Pendiente", "due_date": "01-01-2022" },
+    { "id": 3, "title": "Tarea 3", "description": "Detalles de la tarea 3", "status": "Finalizada", "due_date": "01-01-2022" },
+    { "id": 4, "title": "Tarea 4", "description": "Detalles de la tarea 4", "status": "En Progreso", "due_date": "01-01-2022" },  
+    { "id": 5, "title": "Tarea 5", "description": "Detalles de la tarea 5", "status": "Finalizada", "due_date": "01-01-2022" },
+    { "id": 6, "title": "Tarea 6", "description": "Detalles de la tarea 6", "status": "Pendiente", "due_date": "01-01-2022" },
 ]
 
 @app.get("/tasks")
