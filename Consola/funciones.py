@@ -96,6 +96,7 @@ def filtrar_por_estado(taskList):
                    tablefmt="fancy_grid", stralign="center", numalign="center"))
 
 def changeState(estado):
+    os.system("cls")
     if(estado == "pendiente"):
         print("Estado Actual: ", estado)
         print("1. En proceso")
@@ -122,13 +123,16 @@ def changeState(estado):
         else:
             return estado
     elif(estado == "terminado"):
-        print("Las tareas terminadas ya no pueden editarse")
+        print("Las tareas terminadas no pueden cambiar de estado")
         return estado        
 
 def mod_tarea(taskList):
+    show_tareas(taskList)
+    flag = False
     nombre = input("Nombre de la tarea a modificar: ")
     for i in taskList:
         if i.nombre == nombre:
+            flag = True
             print("1. Nombre")
             print("2. Detalles")
             print("3. Fecha límite")
@@ -146,17 +150,23 @@ def mod_tarea(taskList):
             else:
                 print("Cancelar modificación")
                 break
-        else:
-            print("Tarea no encontrada")
+    if flag == False:
+        print("Tarea no encontrada")
 
 def del_tarea(taskList):
+    flag = False
     nombre = input("Nombre de la tarea a eliminar: ")
     for i in taskList:
         if i.nombre == nombre:
-            taskList.remove(i)
-            print("Tarea eliminada")
-        else:
-            print("Tarea no encontrada")
+            flag = True
+            if i.estado == "terminado" or i.estado == "en proceso":
+                print("Las tareas terminadas o en progreso no pueden ser eliminadas")
+                break
+            else:
+                taskList.remove(i)
+                print("Tarea eliminada")
+    if flag == False:
+        print("Tarea no encontrada")
 
 def menu():
     readFile()
