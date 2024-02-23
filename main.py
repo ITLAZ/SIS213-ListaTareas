@@ -1,4 +1,4 @@
-print("******************************************")
+gitprint("******************************************")
 print("*    Primera Practica Ingenieria de      *")
 print("*                Software                *")
 print("*             Lista de Tareas            *")
