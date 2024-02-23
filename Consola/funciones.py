@@ -236,8 +236,3 @@ def pantallaInicio():
     print(Back.GREEN + Fore.RESET + Style.BRIGHT + chr(124) * 2 + chr(95) * 68 + chr(124) * 2 + Back.RESET)
     time.sleep(4)
     os.system("cls")
-
-
-pantallaInicio()
-detectFile()
-menu()

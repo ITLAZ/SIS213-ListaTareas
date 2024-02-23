@@ -1,10 +1,5 @@
-gitprint("******************************************")
-print("*    Primera Practica Ingenieria de      *")
-print("*                Software                *")
-print("*             Lista de Tareas            *")
-print("******************************************\n")
+from funciones import *
 
-print("Integrantes:")
-print("- Rosario Calisaya")
-print("- Ignacio Tapia")
-print("- Willy Vargas")
+pantallaInicio()
+detectFile()
+menu()
